@@ -1,13 +1,217 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.auth{
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth .card{
+  min-width: 375px;
+  border-radius: 10px!important;
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+.auth .card .card-body{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  text-align: center;
+}
+.auth .card .card-body .main-text{
+  color:#212121;
+  font-size: 30px;
+  margin-bottom:15px;
+}
+.auth .card-body .input-div{
+  border: 1px solid #212121;
+  padding: 10px 15px;
+  border-radius: 13px;
+  margin-top: 20px;
+}
+.auth .card-body .input-div .PhoneInput{
+  padding: 0 16px !important;
+}
+.auth .card-body .input-div .PhoneInput input{
+  border: none;
+}
+.auth .card .card-body .input{
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #212121;
+  width: 100%;
+}
+.auth .card .card-body input:focus{
+  outline: none;
+}
+.auth .card .card-body input::placeholder{
+  font-size: 15px;
+  color: #e5e3dd;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.auth .card .card-body button{
+  background-color:#d0cdc2;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.auth .card .card-body button:hover{
+  background-color:#fff;
+  border: 1px solid #212121;
+  color: #212121;
+}
+.auth .card .card-body .active{
+  background-color:#212121;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth .card-body button .spinner-border{
+  margin-left: 10px;
+}
+.home-page{
+  min-height: 100vh;
+  min-width: 100%;
+  padding-bottom: 20px;
+
+}
+.home-page .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  /*border-radius: 10px;*/
+}
+.home-page .top h1{
+  margin-bottom: 0!important;
+}
+.home-page .top .underline:hover{
+  text-decoration-color: blue!important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.home-page .log-out{
+  background-color:#d0cdc2;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #d0cdc2;
+  transition: all 0.5s ease-in-out;
+}
+.home-page .log-out:hover{
+  background-color:#fff;
+  color:#d0cdc2 ;
+}
+.home-page .main tbody .logo{
+  width: 50px;
+  height: 50px;
+}
+.home-page .main tbody td{
+  cursor: pointer;
+}
+.home-page .main tbody p{
+  max-height: 70px!important;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.home-page .loader{
+  position: fixed;
+  min-width: 100vh;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.home-page .loader .spinner-border{
+  width: 9rem;
+  height: 9rem;
+}
+.company img{
+  width: 50px;
+  height: 50px;
+}
+.company p{
+  max-height: 70px!important;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.company .text{
+  max-width: 400px;
+}
+.company h1{
+  text-align: center;
+  margin: 20px;
+}
+.company .loader{
+  position: fixed;
+  min-width: 100vh;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.company .loader .spinner-border{
+  width: 9rem;
+  height: 9rem;
+}
+.company .no-data{
+  text-align: center;
+  font-size: 60px;
+  margin-top: 30px;
+  color: orangered;
+}
+.company .pagination-product .ant-pagination{
+  text-align: center;
+  margin-top: 50px;
+}
+.search-page h1{
+  text-align: center;
+  margin: 20px;
+}
+.search-page input{
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 13px;
+  border: 1px solid #212121;
+}
+.search-page input:focus{
+  border-color: #212121;
+}
+.search-page h6{
+  color: orangered;
+  text-align: center;
+  font-size: 30px;
+}
+.search-page a{
+  text-align: center;
+  display: block;
+  font-size: 30px;
 }

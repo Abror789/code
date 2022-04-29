@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react';
+import Auth from "./Components/Auth";
+import {Switch, Route, Link, Redirect} from "react-router-dom";
+import Home from "./Components/Home";
+import Token from "./Token";
+import Company from "./Components/Home/Company";
+import SearchMain from "./Components/Home/Search";
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Switch>
+          {!Token && <Route path="/login"  component={Auth}/>}
+            <Route path="/company/:id"  component={Company}/>
+            <Route path="/search"  component={SearchMain}/>
+            {Token &&<Route path="/"  component={Home}/>}
+            {Token?<Redirect to="/"/>:<Redirect to="/login"/>}
+        </Switch>
+
+      </>
   );
-}
+};
 
 export default App;
